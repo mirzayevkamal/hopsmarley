@@ -1,0 +1,69 @@
+@import './variables';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+    .headline{
+        margin: 40px 0px;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        color: $textColor;
+        text-align: center;
+
+        span{
+            color: $mainColor;
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    }
+}
+
+::placeholder{
+    color: #E8E8E8;
+}
+
+.cardsWrapper{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 10px;
+}
+
+@media screen and (max-width: $mobileBreakPoint){
+    .wrapper{
+        width: 95%;
+        margin: auto;
+        .headline{
+            font-size: 20px;
+
+            span{
+                font-size: 25px;
+            }
+        }
+    }
+
+    .cardsWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}

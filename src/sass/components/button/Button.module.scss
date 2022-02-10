@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.button{
+    width: 200px;
+    height: 55px;
+    background: $mainColor;
+    border-radius: 16px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 40px 0px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 500;
+
+    &:hover{
+        background: $mainHoverColor;
+        transform: translate(0px,-3px);
+        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+}

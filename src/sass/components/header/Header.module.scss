@@ -1,0 +1,51 @@
+@import '../../variables';
+
+.header{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $mainColor;
+    padding: 0px 40px;
+    justify-content: space-between;
+
+    a{
+     color: #fff;
+    }
+
+    .brand{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .favorites{
+        font-size: 25px;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+
+        &::before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-image: url('/images/star.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobileBreakPoint){
+    .header{
+        padding: 0px 10px;
+
+        .brand{
+            font-size: 20px;
+        }
+
+        .favorites{
+            font-size: 20px;
+        }
+    }
+}

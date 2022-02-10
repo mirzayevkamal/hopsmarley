@@ -1,0 +1,50 @@
+@import '../../variables';
+
+.favorites{
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    overflow-x: hidden;
+
+    .head{
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+
+        span{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $mainColor;
+            font-weight: bold;
+            padding: 6px;
+            font-size: 18px;
+            color: white;
+            border-radius: 100px;
+            margin-left: 10px;
+        }
+    }
+
+    .favContainer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: $mobileBreakPoint){
+    .favorites{
+        width: 95%;
+        padding: 10px;
+
+        .favContainer{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
